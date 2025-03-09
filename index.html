@@ -30,12 +30,16 @@
         box-sizing: border-box;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       /* -------------------- Navbar --------------------  */
       .navbar {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(216, 112, 147, 0.7);
         padding: 25px;
         color: white;
         position: absolute;
@@ -116,10 +120,23 @@
 
       body {
         font-family: "Comfortaa", sans-serif;
-        font-optical-sizing: auto;
         margin: 0;
         padding: 0;
         background-color: #e0dfdf;
+      }
+
+      .body-section {
+        padding: 50px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        display: flex;
+        gap: 20px;
+      }
+
+      .body-section.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       /* -------------------- HERO -------------------- */
@@ -127,9 +144,9 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 20px;
         padding: 20px;
-        height: 100vh;
+        height: 90vh;
+        transition: opacity 1s ease-in-out;
       }
 
       .hero-image {
@@ -138,6 +155,7 @@
           center/cover no-repeat;
         height: 100%;
         border-radius: 100px 500px 300px 100px;
+        margin-top: 100px;
       }
 
       .hero-content {
@@ -230,19 +248,27 @@
       }
 
       /* -------------------- Order Button -------------------- */
+      .order {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: -500px;
+        margin-left: 600px;
+      }
+
       .order-btn {
-        display: block;
         margin: 20px auto;
         padding: 10px 20px;
         background-color: rgb(216, 112, 147);
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 50px;
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s;
         text-align: center;
         width: 200px;
+        position: absolute;
       }
 
       .order-btn:hover {
@@ -252,12 +278,17 @@
       /* -------------------- Preparations -------------------- */
 
       .preparation {
-        max-width: 1200px;
-        margin: 50px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        padding: 10px;
+        margin-top: 100px;
+      }
+
+      .sauce,
+      .pasta {
+        flex: 1 1 calc(50% - 20px);
+        background-color: #d7cdcd;
+        border-radius: 20px;
+        padding: 40px;
       }
 
       .preparation h2 {
@@ -273,11 +304,11 @@
       }
 
       .step {
-        flex: 1 1 calc(33.333% - 40px);
+        flex: 1 1 calc(50% - 20px);
         background-color: #f9f9f9;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         text-align: center;
       }
 
@@ -295,27 +326,488 @@
         margin: 0;
       }
 
-      /* -------------------- Media Query -------------------- */
-      @media (max-width: 768px) {
+      .step p strong {
+        font-weight: 700;
+      }
+
+      /* -------------------- FOOTER -------------------- */
+
+      footer {
+        text-align: center;
+      }
+
+      footer a {
+        text-decoration: none;
+        color: salmon;
+        transition: background-color 0.3s ease;
+      }
+
+      footer a:hover {
+        cursor: pointer;
+        color: rgb(231, 51, 111);
+      }
+
+      /* =================== Media Query =================== */
+      /* -------------------- 425px -------------------- */
+      @media (max-width: 425px) {
+        /* -------- Navbar -------- */
+        .navbar {
+          padding: 15px;
+        }
+
+        .nav-links li {
+          margin: 0 10px;
+        }
+
+        .nav-links a {
+          font-size: 1rem;
+        }
+
+        .login-btn {
+          padding: 8px 12px;
+          font-size: 0.9rem;
+        }
+
+        /* -------- Hero -------- */
         .hero {
           flex-direction: column;
+          height: auto;
+          padding: 10px;
         }
 
-        .hero-image,
+        .hero-image {
+          flex: 1 1 100%;
+          margin-top: 50px;
+          border-radius: 50px;
+        }
+
         .hero-content {
           flex: 1 1 100%;
+          padding: 10px;
         }
 
-        .hero-content {
+        .ingredients-top,
+        .ingredients-bottom {
+          top: 0;
+          left: 0;
+          padding-right: 0;
+        }
+
+        .ingredients-top::before,
+        .ingredients-bottom::before {
+          width: 200px;
+          height: 200px;
+        }
+
+        .ingredients-top::after,
+        .ingredients-bottom::after {
+          width: 50px;
+          height: 50px;
+        }
+
+        /* -------- Order Button -------- */
+        .order {
+          margin-top: 20px;
+          margin-left: 0;
+        }
+
+        .order-btn {
+          position: static;
+          width: 100%;
+        }
+
+        /* -------- Body Section -------- */
+        .body-section {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .preparation {
+          margin-top: 20px;
+        }
+
+        .sauce,
+        .pasta {
+          flex: 1 1 100%;
+          padding: 20px;
+        }
+
+        .steps {
           flex-direction: column;
         }
 
         .step {
-          flex: 1 1 calc(50% - 20px);
+          flex: 1 1 100%;
         }
       }
 
-      @media (max-width: 480px) {
+      /* -------------------- 625px -------------------- */
+      @media (max-width: 625px) {
+        /* -------- Navbar -------- */
+        .navbar {
+          padding: 20px;
+        }
+
+        .nav-links li {
+          margin: 0 15px;
+        }
+
+        .nav-links a {
+          font-size: 1.1rem;
+        }
+
+        .login-btn {
+          padding: 8px 15px;
+          font-size: 1rem;
+        }
+
+        /* -------- Hero -------- */
+        .hero {
+          flex-direction: column;
+          height: auto;
+          padding: 15px;
+        }
+
+        .hero-image {
+          flex: 1 1 100%;
+          margin-top: 70px;
+          border-radius: 70px;
+        }
+
+        .hero-content {
+          flex: 1 1 100%;
+          padding: 15px;
+        }
+
+        .ingredients-top,
+        .ingredients-bottom {
+          top: 0;
+          left: 0;
+          padding-right: 0;
+        }
+
+        .ingredients-top::before,
+        .ingredients-bottom::before {
+          width: 250px;
+          height: 250px;
+        }
+
+        .ingredients-top::after,
+        .ingredients-bottom::after {
+          width: 70px;
+          height: 70px;
+        }
+
+        /* -------- Order Button -------- */
+        .order {
+          margin-top: 30px;
+          margin-left: 0;
+        }
+
+        .order-btn {
+          position: static;
+          width: 100%;
+        }
+
+        /* -------- Body Section -------- */
+        .body-section {
+          flex-direction: column;
+          padding: 30px;
+        }
+
+        .preparation {
+          margin-top: 30px;
+        }
+
+        .sauce,
+        .pasta {
+          flex: 1 1 100%;
+          padding: 25px;
+        }
+
+        .steps {
+          flex-direction: column;
+        }
+
+        .step {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* -------------------- 760px -------------------- */
+
+      @media (max-width: 760px) {
+        /* -------- Navbar -------- */
+        .navbar {
+          padding: 25px;
+        }
+
+        .nav-links li {
+          margin: 0 20px;
+        }
+
+        .nav-links a {
+          font-size: 1.2rem;
+        }
+
+        .login-btn {
+          padding: 10px 18px;
+          font-size: 1.1rem;
+        }
+
+        /* -------- Hero -------- */
+        .hero {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+        }
+
+        .hero-image {
+          flex: 1 1 100%;
+          margin-top: 80px;
+          border-radius: 80px;
+        }
+
+        .hero-content {
+          flex: 1 1 100%;
+          padding: 20px;
+        }
+
+        .ingredients-top,
+        .ingredients-bottom {
+          top: 0;
+          left: 0;
+          padding-right: 0;
+        }
+
+        .ingredients-top::before,
+        .ingredients-bottom::before {
+          width: 300px;
+          height: 300px;
+        }
+
+        .ingredients-top::after,
+        .ingredients-bottom::after {
+          width: 80px;
+          height: 80px;
+        }
+
+        /* -------- Order Button -------- */
+        .order {
+          margin-top: 40px;
+          margin-left: 0;
+        }
+
+        .order-btn {
+          position: static;
+          width: 100%;
+        }
+
+        /* -------- Body Section -------- */
+        .body-section {
+          flex-direction: column;
+          padding: 40px;
+        }
+
+        .preparation {
+          margin-top: 40px;
+        }
+
+        .sauce,
+        .pasta {
+          flex: 1 1 100%;
+          padding: 30px;
+        }
+
+        .steps {
+          flex-direction: column;
+        }
+
+        .step {
+          flex: 1 1 100%;
+        }
+      }
+      /* -------------------- 825px -------------------- */
+
+      @media (max-width: 825px) {
+        /* -------- Navbar -------- */
+        .navbar {
+          padding: 25px;
+        }
+
+        .nav-links li {
+          margin: 0 20px;
+        }
+
+        .nav-links a {
+          font-size: 1.2rem;
+        }
+
+        .login-btn {
+          padding: 10px 18px;
+          font-size: 1.1rem;
+        }
+
+        /* -------- Hero -------- */
+        .hero {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+        }
+
+        .hero-image {
+          flex: 1 1 100%;
+          margin-top: 80px;
+          border-radius: 80px;
+        }
+
+        .hero-content {
+          flex: 1 1 100%;
+          padding: 20px;
+        }
+
+        .ingredients-top,
+        .ingredients-bottom {
+          top: 0;
+          left: 0;
+          padding-right: 0;
+        }
+
+        .ingredients-top::before,
+        .ingredients-bottom::before {
+          width: 300px;
+          height: 300px;
+        }
+
+        .ingredients-top::after,
+        .ingredients-bottom::after {
+          width: 80px;
+          height: 80px;
+        }
+
+        /* -------- Order Button -------- */
+        .order {
+          margin-top: 40px;
+          margin-left: 0;
+        }
+
+        .order-btn {
+          position: static;
+          width: 100%;
+        }
+
+        /* -------- Body Section -------- */
+        .body-section {
+          flex-direction: column;
+          padding: 40px;
+        }
+
+        .preparation {
+          margin-top: 40px;
+        }
+
+        .sauce,
+        .pasta {
+          flex: 1 1 100%;
+          padding: 30px;
+        }
+
+        .steps {
+          flex-direction: column;
+        }
+
+        .step {
+          flex: 1 1 100%;
+        }
+      }
+      /* -------------------- 1200px -------------------- */
+      @media (max-width: 1200px) {
+        /* -------- Navbar -------- */
+        .navbar {
+          padding: 25px;
+        }
+
+        .nav-links li {
+          margin: 0 20px;
+        }
+
+        .nav-links a {
+          font-size: 1.2rem;
+        }
+
+        .login-btn {
+          padding: 10px 18px;
+          font-size: 1.1rem;
+        }
+
+        /* -------- Hero -------- */
+        .hero {
+          flex-direction: column;
+          height: auto;
+          padding: 20px;
+        }
+
+        .hero-image {
+          flex: 1 1 100%;
+          margin-top: 80px;
+          border-radius: 80px;
+        }
+
+        .hero-content {
+          flex: 1 1 100%;
+          padding: 20px;
+        }
+
+        .ingredients-top,
+        .ingredients-bottom {
+          top: 0;
+          left: 0;
+          padding-right: 0;
+        }
+
+        .ingredients-top::before,
+        .ingredients-bottom::before {
+          width: 300px;
+          height: 300px;
+        }
+
+        .ingredients-top::after,
+        .ingredients-bottom::after {
+          width: 80px;
+          height: 80px;
+        }
+
+        /* -------- Order Button -------- */
+        .order {
+          margin-top: 40px;
+          margin-left: 0;
+        }
+
+        .order-btn {
+          position: static;
+          width: 100%;
+        }
+
+        /* -------- Body Section -------- */
+        .body-section {
+          flex-direction: column;
+          padding: 40px;
+        }
+
+        .preparation {
+          margin-top: 40px;
+        }
+
+        .sauce,
+        .pasta {
+          flex: 1 1 100%;
+          padding: 30px;
+        }
+
+        .steps {
+          flex-direction: column;
+        }
+
         .step {
           flex: 1 1 100%;
         }
@@ -368,107 +860,132 @@
           </ul>
         </div>
       </div>
-      <button
-        class="order-btn"
-        data-item="Penne Pasta with Chicken and Mushrooms + Béchamel Sauce"
-      >
-        Order
-      </button>
-    </div>
-
-    <div class="preparation">
-      <h2>👨‍🍳 Preparation for Béchamel Sauce:</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="step-number">1</span>
-          <p>
-            Melt the butter: Put the butter in a saucepan and melt over low
-            heat..
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">2</span>
-          <p>
-            Add the flour: After the butter is completely melted, add the flour
-            and roast for 1-2 minutes, stirring constantly. You should stir
-            until the flour loses its light smell, but do not let it darken in
-            color.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">3</span>
-          <p>
-            Add the milk: While adding the milk little by little, mix it quickly
-            with a whisk. This will prevent lumps.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">4</span>
-          <p>
-            Make sure it thickens: Continue cooking over medium heat, stirring
-            constantly. When the sauce starts to thicken, add salt and optional
-            black pepper and grated nutmeg.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">5</span>
-          <p>
-            onsistency control: The consistency of the sauce should be runny but
-            thick. If it is too thick, you can add a little more milk. Bon
-            Appétit! 😊
-          </p>
-        </div>
+      <div class="order">
+        <button
+          class="order-btn"
+          data-item="Penne Pasta with Chicken and Mushrooms + Béchamel Sauce"
+        >
+          Order
+        </button>
       </div>
     </div>
 
-    <div class="preparation">
-      <h2>👨‍🍳 Preparation for Pasta:</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="step-number">1</span>
-          <p>
-            Boil the pasta: Boil the penne pasta in plenty of salted water for
-            the time indicated on the package. Drain the boiled pasta and set
-            aside.
-          </p>
+    <div class="body-section">
+      <div class="preparation sauce">
+        <h2>👨‍🍳 Preparation for Béchamel Sauce:</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <p>
+              <strong>Melt the butter :</strong> Put the butter in a saucepan
+              and melt over low heat..
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <p>
+              <strong>Add the flour :</strong> After the butter is completely
+              melted, add the flour and roast for 1-2 minutes, stirring
+              constantly. You should stir until the flour loses its light smell,
+              but do not let it darken in color.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <p>
+              <strong>Add the milk :</strong> While adding the milk little by
+              little, mix it quickly with a whisk. This will prevent lumps.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <p>
+              <strong>Make sure it thickens :</strong> Continue cooking over
+              medium heat, stirring constantly. When the sauce starts to
+              thicken, add salt and optional black pepper and grated nutmeg.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">5</span>
+            <p>
+              <strong>Consistency control :</strong> The consistency of the
+              sauce should be runny but thick. If it is too thick, you can add a
+              little more milk. Bon Appétit! 😊
+            </p>
+          </div>
         </div>
-        <div class="step">
-          <span class="step-number">2</span>
-          <p>
-            Cook the chicken: Cut the chicken breasts into cubes, season with
-            salt and pepper. Heat the oil in a skillet, add the chicken and cook
-            over medium heat. Cook until the chicken is golden, then remove the
-            chicken from the pan and set aside.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">3</span>
-          <p>
-            Sauté the mushrooms: In the same skillet, add the mushrooms and
-            sauté, seasoning with salt and pepper. Cook until the mushrooms
-            release their juice.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">4</span>
-          <p>
-            Add the béchamel sauce: Once the mushrooms have released their
-            juices, add the chicken and béchamel sauce and mix well. Once all
-            the ingredients are well mixed, add your pre-cooked pasta and mix
-            again.
-          </p>
-        </div>
-        <div class="step">
-          <span class="step-number">5</span>
-          <p>
-            Serve: Place the pasta on a warm serving plate. Optionally, you can
-            sprinkle parsley on top. Bon Appétit! 😊
-          </p>
+      </div>
+
+      <div class="preparation pasta">
+        <h2>👨‍🍳 Preparation for Pasta:</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <p>
+              <strong>Boil the pasta :</strong> Boil the penne pasta in plenty
+              of salted water for the time indicated on the package. Drain the
+              boiled pasta and set aside.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <p>
+              <strong>Cook the chicken :</strong> Cut the chicken breasts into
+              cubes, season with salt and pepper. Heat the oil in a skillet, add
+              the chicken and cook over medium heat. Cook until the chicken is
+              golden, then remove the chicken from the pan and set aside.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <p>
+              <strong>Sauté the mushrooms :</strong> In the same skillet, add
+              the mushrooms and sauté, seasoning with salt and pepper. Cook
+              until the mushrooms release their juice.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <p>
+              <strong>Add the béchamel sauce :</strong> Once the mushrooms have
+              released their juices, add the chicken and béchamel sauce and mix
+              well. Once all the ingredients are well mixed, add your pre-cooked
+              pasta and mix again.
+            </p>
+          </div>
+          <div class="step">
+            <span class="step-number">5</span>
+            <p>
+              <strong>Serve :</strong> Place the pasta on a warm serving plate.
+              Optionally, you can sprinkle parsley on top. Bon Appétit! 😊
+            </p>
+          </div>
         </div>
       </div>
     </div>
+    <footer>
+      <p>
+        Coded by
+        <a href="https://www.linkedin.com/in/esraayaz/" target="_blank"
+          >Esra Ayaz</a
+        >
+      </p>
+    </footer>
   </body>
   <script>
+    document.addEventListener("scroll", function () {
+      const bodySection = document.querySelector(".body-section");
+      const heroHeight = document.querySelector(".hero").offsetHeight;
+      const scrollPosition = window.scrollY;
+
+      // Make the body section visible when hovering under the Hero section
+      if (scrollPosition > heroHeight * 0.1) {
+        bodySection.classList.add("visible");
+      } else {
+        bodySection.classList.remove("visible");
+      }
+    });
+
     // An array for storing cart data
     let cartItems = [];
 
