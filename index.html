@@ -21,8 +21,20 @@
         padding: 0;
         box-sizing: border-box;
       }
-      /* --------------- BODY --------------- */
 
+      #page {
+        margin: 0 auto;
+        max-width: 1200px;
+        position: relative;
+      }
+      /* --------------- BODY --------------- */
+      p {
+        font-size: 1.2rem;
+        width: 100%;
+      }
+      body {
+        background-color: #dcd3ca;
+      }
       /* --------------- NAV --------------- */
 
       nav {
@@ -30,7 +42,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: #d3957e;
       }
 
       nav ul {
@@ -38,17 +50,19 @@
         margin: 0;
         padding: 0;
         display: flex;
+        justify-content: center;
+        width: 100%;
       }
 
       nav ul li {
         margin: 0 15px;
         font-size: 1.2rem;
-        text-align: center;
       }
 
       nav ul li a {
         text-decoration: none;
         color: white;
+        padding: 50px;
       }
 
       nav ul li a:hover {
@@ -85,7 +99,7 @@
       .hero {
         display: flex;
         padding: 20px;
-        background-color: white;
+        background-color: #dcd3ca;
       }
 
       .hero img {
@@ -110,6 +124,7 @@
         align-items: center;
         margin-bottom: 10px;
         padding-top: 50px;
+        flex-direction: column-reverse;
       }
 
       .ingredient-item img {
@@ -119,6 +134,26 @@
       }
 
       /* --------------- PREPARATION --------------- */
+
+      .preparation-steps {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .step {
+        width: 30%;
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: left;
+      }
+
+      .step img {
+        width: 80%;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -138,7 +173,7 @@
     </nav>
     <div class="hero">
       <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/797/original/penne2.png?1741622603"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/809/original/penne2_%281%29.png?1741630587"
         alt="Pasta"
         width="500px"
       />
