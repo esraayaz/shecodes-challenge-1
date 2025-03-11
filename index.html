@@ -32,9 +32,7 @@
         font-size: 1.2rem;
         width: 100%;
       }
-      body {
-        background-color: #dcd3ca;
-      }
+
       /* --------------- NAV --------------- */
 
       nav {
@@ -42,7 +40,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #d3957e;
+        background-color: rgba(0, 0, 0, 0.8);
       }
 
       nav ul {
@@ -63,6 +61,7 @@
         text-decoration: none;
         color: white;
         padding: 50px;
+        font-size: 1.4rem;
       }
 
       nav ul li a:hover {
@@ -76,76 +75,78 @@
 
       .nav-right .cart {
         margin-right: 20px;
-        font-size: 1.5rem;
+        font-size: 2rem;
         cursor: pointer;
+        color: white;
       }
 
       .nav-right .login-button {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         border: none;
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 10px 30px;
+        font-size: 1.2rem;
         cursor: pointer;
         border-radius: 10px;
+        transition: background-color 0.5s ease-in-out;
       }
 
       .nav-right .login-button:hover {
-        background-color: pink;
+        background-color: #e5a2a3;
       }
 
       /* --------------- HERO --------------- */
 
       .hero {
-        display: flex;
-        padding: 20px;
         background-color: #dcd3ca;
-      }
-
-      .hero img {
-        width: 35%;
-        height: auto;
-        object-fit: cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/635/original/engin-akyurt-o7KD3rwAcVI-unsplash.jpg?1741504813")
+            center/cover no-repeat;
       }
 
       .ingredients {
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        width: 100%;
+        gap: 20px;
+        padding: 30px;
+        display: grid;
+        background-color: rgba(0, 0, 0, 0.5);
       }
 
-      .ingredients > h2 {
+      .first-title {
         font-size: 2rem;
+        grid-column: span 2;
+        margin-left: 10px;
+        color: white;
       }
-      .ingredient-item {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 10px;
-        padding-top: 50px;
-        flex-direction: column-reverse;
+
+      .ingredient-item p {
+        text-align: left;
+        color: white;
       }
 
       .ingredient-item img {
-        width: 300px;
-        margin-right: 10px;
-        border-radius: 20px;
+        width: 20%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 30px;
       }
 
       /* --------------- PREPARATION --------------- */
 
       .preparation-steps {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         padding: 20px;
+        display: flex;
+      }
+
+      .preparation-title {
+        text-align: center;
+        font-size: 2rem;
+        padding: 50px;
       }
 
       .step {
-        width: 30%;
+        width: 25%;
         margin: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         padding: 10px;
         text-align: left;
       }
@@ -153,79 +154,82 @@
       .step img {
         width: 80%;
         height: auto;
+        border-radius: 20px;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Order Online</a></li>
-      </ul>
-      <div class="nav-right">
-        <div class="cart">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </div>
-        <button class="login-button">Log In</button>
-      </div>
-    </nav>
     <div class="hero">
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/809/original/penne2_%281%29.png?1741630587"
-        alt="Pasta"
-        width="500px"
-      />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="#">Order Online</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </div>
+          <button class="login-button">Log In</button>
+        </div>
+      </nav>
       <div class="ingredients">
-        <h2>Ingredients</h2>
+        <h2 class="first-title">Ingredients</h2>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/774/original/penne.jpg?1741611725"
             alt="Penne pasta"
-          /><span>300 g penne pasta</span>
+          />
+          <p>300 g penne pasta</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/775/original/chicken.jpg?1741611729"
             alt="Chicken breast"
-          /><span>400 g chicken breasts (diced)</span>
+          />
+          <p>400 g chicken breasts (diced)</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/776/original/mushroom.jpg?1741611733"
             alt="Mushroom"
-          /><span>400 g mushrooms (chopped)</span>
+          />
+          <p>400 g mushrooms (chopped)</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/777/original/olive_oil.jpg?1741611738"
             alt="Olive oil"
-          /><span>3 tablespoon of olive oil</span>
+          />
+          <p>3 tablespoon of olive oil</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/778/original/bechamel.jpg?1741611742"
             alt="Sauce"
-          /><span>500 ml béchamel sauce</span>
+          />
+          <p>500 ml béchamel sauce</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/779/original/salt.jpg?1741611749"
             alt="Salt pepper"
-          /><span>Salt and pepper (to taste)</span>
+          />
+          <p>Salt and pepper (to taste)</p>
         </div>
         <div class="ingredient-item">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/793/original/parsley.jpg?1741617576"
             alt="Parsley"
-          /><span>Parsley (opsiyonal)</span>
+          />
+          <p>Parsley (opsiyonal)</p>
         </div>
       </div>
     </div>
 
+    <h2 class="preparation-title">Preparation</h2>
     <div class="preparation-steps">
-      <h2>Preparation</h2>
       <div class="step">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/781/original/boil_penne.jpg?1741611924"
