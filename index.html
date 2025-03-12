@@ -65,7 +65,6 @@
 
       nav ul li a:hover {
         color: chartreuse;
-        text-decoration: underline;
       }
 
       .nav-right {
@@ -74,10 +73,23 @@
       }
 
       .nav-right .cart {
+        position: relative;
         margin-right: 20px;
         font-size: 2rem;
         cursor: pointer;
-        color: white;
+        color: rgb(168, 251, 60);
+      }
+
+      #cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 1rem;
+        font-weight: bold;
       }
 
       .nav-right .login-button {
@@ -101,7 +113,7 @@
       .hero {
         width: 100%;
         background-color: #dcd3ca;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
           url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/635/original/engin-akyurt-o7KD3rwAcVI-unsplash.jpg?1741504813")
             center/cover no-repeat;
       }
@@ -117,42 +129,57 @@
         font-size: 2rem;
         margin-left: 10px;
         color: white;
-        text-align: right;
-        padding: 50px 40px 30px 0px;
+        text-align: left;
+        padding: 50px 0px 30px 40px;
         text-decoration: underline;
       }
 
       .ingredient-item p {
-        text-align: right;
+        text-align: left;
         color: white;
-        padding: 20px 40px 20px 0px;
+        padding: 20px 0px 20px 40px;
         font-size: 1.5rem;
       }
 
-      /* .ingredient-item img {
-        width: 30%;
-        height: auto;
-        object-fit: contain;
-        border-radius: 30px;
-      } */
+      /* --------------- ORDER BUTTON --------------- */
+
+      .container {
+        text-align: center;
+        padding-bottom: 50px;
+      }
+      .order-btn {
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: none;
+        font-size: 1.5rem;
+        background-color: #8bc34a;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .order-btn:hover {
+        background-color: rgb(168, 251, 60);
+      }
 
       /* --------------- PREPARATION --------------- */
 
       .preparation-steps {
-        padding: 20px;
+        padding: 25px 50px 50px 50px;
         display: flex;
+        background-color: #dcd3ca;
       }
 
       .preparation-title {
         text-align: center;
         font-size: 2rem;
-        padding: 50px;
+        padding: 50px 0px 0px 0px;
+        background-color: #dcd3ca;
       }
 
       .step {
         width: 25%;
         margin: 10px;
-        padding: 10px;
+        padding: 20px;
         text-align: left;
       }
 
@@ -160,6 +187,29 @@
         width: 80%;
         height: auto;
         border-radius: 20px;
+      }
+
+      /* --------------- SAUCE --------------- */
+
+      /* --------------- FOOTER --------------- */
+
+      footer > div {
+        text-align: center;
+      }
+      footer > div > p {
+        background-color: black;
+        color: white;
+        padding: 20px;
+      }
+
+      footer > div > p > a {
+        color: #8bc34a;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      footer > div > p > a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -175,6 +225,7 @@
         <div class="nav-right">
           <div class="cart">
             <i class="fa-solid fa-basket-shopping"></i>
+            <span id="cart-count">0</span>
           </div>
           <button class="login-button">Log In</button>
         </div>
@@ -182,54 +233,29 @@
       <div class="ingredients">
         <h2 class="first-title">Ingredients</h2>
         <div class="ingredient-item">
-          <!-- <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/774/original/penne.jpg?1741611725"
-            alt="Penne pasta"
-          /> -->
           <p>300 g penne pasta</p>
         </div>
         <div class="ingredient-item">
-          <!-- <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/775/original/chicken.jpg?1741611729"
-            alt="Chicken breast"
-          /> -->
           <p>400 g chicken breasts (diced)</p>
         </div>
         <div class="ingredient-item">
-          <!--<img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/776/original/mushroom.jpg?1741611733"
-            alt="Mushroom"
-          /> -->
           <p>400 g mushrooms (chopped)</p>
         </div>
         <div class="ingredient-item">
-          <!--<img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/777/original/olive_oil.jpg?1741611738"
-            alt="Olive oil"
-          /> -->
           <p>3 tablespoon of olive oil</p>
         </div>
         <div class="ingredient-item">
-          <!-- <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/778/original/bechamel.jpg?1741611742"
-            alt="Sauce"
-          /> -->
           <p>500 ml béchamel sauce</p>
         </div>
         <div class="ingredient-item">
-          <!--<img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/779/original/salt.jpg?1741611749"
-            alt="Salt pepper"
-          /> -->
           <p>Salt and pepper (to taste)</p>
         </div>
         <div class="ingredient-item">
-          <!-- <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/793/original/parsley.jpg?1741617576"
-            alt="Parsley"
-          /> -->
           <p>Parsley (opsiyonal)</p>
         </div>
+      </div>
+      <div class="container">
+        <button class="order-btn">Order</button>
       </div>
     </div>
 
@@ -288,5 +314,38 @@
         </p>
       </div>
     </div>
+
+    <footer>
+      <div>
+        <p>
+          Coded by
+          <a href="https://www.linkedin.com/in/esraayaz/" target="_blank"
+            >Esra Ayaz</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Variable to hold the number of items in the cart
+      let cartCount = 0;
+
+      // Span element to show the number inside the basket icon
+      const cartCountElement = document.getElementById("cart-count");
+
+      // Selecting the Order button
+      const orderButton = document.querySelector(".order-btn");
+
+      // Click order button
+      orderButton.addEventListener("click", function () {
+        // Sepet sayısını 1 artır
+        cartCount++;
+
+        // Update number of baskets
+        cartCountElement.textContent = cartCount;
+
+        // Alert
+        alert(`You have ${cartCount} servings of pasta in your cart.`);
+      });
+    </script>
   </body>
 </html>
