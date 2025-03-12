@@ -14,8 +14,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Esra's Favorite</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       * {
         margin: 0 auto;
         padding: 0;
@@ -28,6 +35,11 @@
         position: relative;
       }
       /* --------------- BODY --------------- */
+
+      body {
+        font-family: "Montserrat Alternates", sans-serif;
+      }
+
       p {
         font-size: 1.2rem;
       }
@@ -130,14 +142,14 @@
         margin-left: 10px;
         color: white;
         text-align: left;
-        padding: 50px 0px 30px 40px;
+        padding: 50px 0px 30px 100px;
         text-decoration: underline;
       }
 
       .ingredient-item p {
         text-align: left;
         color: white;
-        padding: 20px 0px 20px 40px;
+        padding: 20px 0px 20px 100px;
         font-size: 1.5rem;
       }
 
@@ -164,7 +176,7 @@
       /* --------------- PREPARATION --------------- */
 
       .preparation-steps {
-        padding: 25px 50px 50px 50px;
+        padding: 50px 50px 100px 50px;
         display: flex;
         background-color: #dcd3ca;
       }
@@ -172,7 +184,7 @@
       .preparation-title {
         text-align: center;
         font-size: 2rem;
-        padding: 50px 0px 0px 0px;
+        padding: 75px 0px 0px 0px;
         background-color: #dcd3ca;
       }
 
@@ -190,6 +202,36 @@
       }
 
       /* --------------- SAUCE --------------- */
+
+      .sauce {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        font-size: 1.2rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/634/original/karolina-kolodziejczak-NRDfttoK8qw-unsplash.jpg?1741504795")
+            center/cover no-repeat;
+      }
+
+      .sauce h2 {
+        text-align: center;
+        padding: 50px;
+      }
+
+      .ingredients-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px;
+      }
+
+      .ingredient-sauce img {
+        max-width: 300px;
+        border-radius: 20px;
+      }
 
       /* --------------- FOOTER --------------- */
 
@@ -259,7 +301,7 @@
       </div>
     </div>
 
-    <h2 class="preparation-title">Preparation</h2>
+    <h2 class="preparation-title">Preparation for Pasta:</h2>
     <div class="preparation-steps">
       <div class="step">
         <img
@@ -311,6 +353,105 @@
         <p>
           Place the pasta on a warm serving plate. Optionally, you can sprinkle
           parsley on top. Bon Appétit! 😊
+        </p>
+      </div>
+    </div>
+
+    <div class="sauce">
+      <h2>Ingredients for Béchamel Sauce :</h2>
+      <div class="ingredients-container">
+        <div class="ingredient-sauce">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/062/original/milk.jpg?1741808455"
+            alt=""
+          />
+          <p>500 ml milk</p>
+        </div>
+        <div class="ingredient-sauce">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/060/original/butter.jpg?1741808446"
+            alt=""
+          />
+          <p>40 g butter (about 2 tablespoons)</p>
+        </div>
+        <div class="ingredient-sauce">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/059/original/flour.jpg?1741808424"
+            alt=""
+          />
+          <p>40 g flour (about 2 tablespoons)</p>
+        </div>
+        <div class="ingredient-sauce">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/779/original/salt.jpg?1741611749"
+            alt=""
+          />
+          <p>Salt and black pepper (to taste)</p>
+        </div>
+        <div class="ingredient-sauce">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/063/original/nutmeg.jpg?1741808464"
+            alt=""
+          />
+          <p>Grated nutmeg (optional, for flavor)</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="preparation-title">Preparation for Béchamel Sauce :</h2>
+    <div class="preparation-steps">
+      <div class="step">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/064/original/butter-pan.jpg?1741808471"
+          alt="Melt the butter"
+        />
+        <p>
+          <strong>Melt the butter :</strong> Put the butter in a saucepan and
+          melt over low heat.
+        </p>
+      </div>
+      <div class="step">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/065/original/flour-pan.jpg?1741808484"
+          alt="Add the flour"
+        />
+        <p>
+          <strong>Add the flour :</strong> After the butter is completely
+          melted, add the flour and roast for 1-2 minutes, stirring constantly.
+          You should stir until the flour loses its light smell, but do not let
+          it darken in color.
+        </p>
+      </div>
+      <div class="step">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/066/original/milk-pan.jpg?1741808553"
+          alt="Add the milk"
+        />
+        <p>
+          <strong>Add the milk :</strong> While adding the milk little by
+          little, mix it quickly with a whisk. This will prevent lumps.
+        </p>
+      </div>
+      <div class="step">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/067/original/salt-pan.jpg?1741808558"
+          alt="Thickens"
+        />
+        <p>
+          <strong>Make sure it thickens :</strong> Continue cooking over medium
+          heat, stirring constantly. When the sauce starts to thicken, add salt
+          and optional black pepper and grated nutmeg.
+        </p>
+      </div>
+      <div class="step">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/068/original/finish-pan.jpg?1741808561"
+          alt="Control"
+        />
+        <p>
+          <strong>Consistency control :</strong> The consistency of the sauce
+          should be runny but thick. If it is too thick, you can add a little
+          more milk. Bon Appétit! 😊
         </p>
       </div>
     </div>
