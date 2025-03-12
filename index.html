@@ -30,7 +30,6 @@
       /* --------------- BODY --------------- */
       p {
         font-size: 1.2rem;
-        width: 100%;
       }
 
       /* --------------- NAV --------------- */
@@ -65,6 +64,7 @@
       }
 
       nav ul li a:hover {
+        color: chartreuse;
         text-decoration: underline;
       }
 
@@ -92,12 +92,14 @@
       }
 
       .nav-right .login-button:hover {
-        background-color: #e5a2a3;
+        background-color: #da4346;
+        color: white;
       }
 
       /* --------------- HERO --------------- */
 
       .hero {
+        width: 100%;
         background-color: #dcd3ca;
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
           url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/635/original/engin-akyurt-o7KD3rwAcVI-unsplash.jpg?1741504813")
@@ -105,31 +107,34 @@
       }
 
       .ingredients {
-        width: 100%;
         gap: 20px;
-        padding: 30px;
-        display: grid;
-        background-color: rgba(0, 0, 0, 0.5);
+        padding: 60px 0px 80px 20px;
+        display: block;
+        margin-left: 0px;
       }
 
       .first-title {
         font-size: 2rem;
-        grid-column: span 2;
         margin-left: 10px;
         color: white;
+        text-align: right;
+        padding: 50px 40px 30px 0px;
+        text-decoration: underline;
       }
 
       .ingredient-item p {
-        text-align: left;
+        text-align: right;
         color: white;
+        padding: 20px 40px 20px 0px;
+        font-size: 1.5rem;
       }
 
-      .ingredient-item img {
-        width: 20%;
+      /* .ingredient-item img {
+        width: 30%;
         height: auto;
         object-fit: contain;
         border-radius: 30px;
-      }
+      } */
 
       /* --------------- PREPARATION --------------- */
 
@@ -177,52 +182,52 @@
       <div class="ingredients">
         <h2 class="first-title">Ingredients</h2>
         <div class="ingredient-item">
-          <img
+          <!-- <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/774/original/penne.jpg?1741611725"
             alt="Penne pasta"
-          />
+          /> -->
           <p>300 g penne pasta</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!-- <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/775/original/chicken.jpg?1741611729"
             alt="Chicken breast"
-          />
+          /> -->
           <p>400 g chicken breasts (diced)</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!--<img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/776/original/mushroom.jpg?1741611733"
             alt="Mushroom"
-          />
+          /> -->
           <p>400 g mushrooms (chopped)</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!--<img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/777/original/olive_oil.jpg?1741611738"
             alt="Olive oil"
-          />
+          /> -->
           <p>3 tablespoon of olive oil</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!-- <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/778/original/bechamel.jpg?1741611742"
             alt="Sauce"
-          />
+          /> -->
           <p>500 ml béchamel sauce</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!--<img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/779/original/salt.jpg?1741611749"
             alt="Salt pepper"
-          />
+          /> -->
           <p>Salt and pepper (to taste)</p>
         </div>
         <div class="ingredient-item">
-          <img
+          <!-- <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/793/original/parsley.jpg?1741617576"
             alt="Parsley"
-          />
+          /> -->
           <p>Parsley (opsiyonal)</p>
         </div>
       </div>
