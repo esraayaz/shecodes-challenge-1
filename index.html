@@ -265,14 +265,95 @@
       /* --------------- 425px --------------- */
       @media screen and (max-width: 425px) {
         nav {
+          flex-direction: column;
+          padding: 10px;
+          text-align: center;
+        }
+
+        nav ul {
+          flex-direction: column;
+          width: auto;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        nav ul li a {
+          padding: 10px;
+          font-size: 1rem;
+        }
+
+        .nav-right {
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+        }
+
+        .hero {
+          background-position: center;
+          background-size: cover;
+          padding: 50px 10px;
+        }
+
+        .first-title {
+          font-size: 1.5rem;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .ingredient-item p {
+          padding: 10px;
+          font-size: 1.1rem;
+          text-align: center;
+        }
+
+        .preparation-steps {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .step {
+          width: 100%;
+          text-align: center;
+        }
+
+        .sauce {
+          padding: 20px;
+        }
+
+        .sauce h2 {
+          font-size: 1.5rem;
+          padding: 20px;
+        }
+
+        .ingredients-container {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .ingredient-sauce img {
+          max-width: 200px;
+        }
+
+        .order-btn {
+          font-size: 1.2rem;
+          padding: 8px 20px;
+        }
+      }
+
+      /* --------------- 768px --------------- */
+      @media screen and (max-width: 768px) {
+        nav {
           display: flex;
-          padding: 5px;
+          padding: 20px;
           text-align: center;
         }
 
         nav ul {
           flex-direction: row;
           width: auto;
+          height: auto;
         }
 
         nav ul li {
@@ -280,12 +361,12 @@
         }
 
         nav ul li a {
-          padding: 5px;
+          padding: 30px;
           font-size: 0.8rem;
         }
 
         .nav-right {
-          flex-direction: column-reverse;
+          flex-direction: row;
           gap: 10px;
           margin-top: 1px;
         }
@@ -349,13 +430,17 @@
 
         .step {
           width: 100%;
-          text-align: left;
-          padding: 5px;
+          text-align: center;
+          padding: 5px 100px 5px 100px;
         }
 
         .step p {
           font-size: 0.9rem;
           line-height: 1.3;
+        }
+
+        .step img {
+          width: 30%;
         }
 
         .sauce {
@@ -368,7 +453,140 @@
         }
 
         .ingredients-container {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 20px;
+        }
+
+        .ingredient-sauce p {
+          font-size: 0.8rem;
+          text-align: left;
+        }
+
+        .ingredient-sauce img {
+          max-width: 100px;
+          height: auto;
+          display: flex;
+        }
+
+        footer > div > p {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* --------------- 1024px --------------- */
+      @media screen and (max-width: 1024px) {
+        nav {
+          display: flex;
+          padding: 20px;
+          text-align: center;
+        }
+
+        nav ul {
+          flex-direction: row;
+          width: auto;
+          height: auto;
+        }
+
+        nav ul li {
+          margin: 0px;
+        }
+
+        nav ul li a {
+          padding: 30px;
+          font-size: 1rem;
+        }
+
+        .nav-right {
+          flex-direction: row;
+          gap: 10px;
+          margin-top: 1px;
+        }
+
+        .nav-right .cart {
+          margin-top: 10px;
+          margin-right: 15px;
+          font-size: 1rem;
+        }
+
+        #cart-count {
+          padding: 1px 3px;
+          font-size: 0.8rem;
+        }
+
+        .nav-right .login-button {
+          margin-top: 10px;
+          padding: 3px 6px;
+          font-size: 0.8rem;
+        }
+
+        .first-title {
+          font-size: 1.2rem;
+          padding: 10px 0px;
+          text-align: left;
+          text-decoration: none;
+        }
+
+        .order-btn {
+          padding: 5px 15px;
+          font-size: 1rem;
+        }
+
+        .hero {
+          background-position: center;
+          background-size: cover;
+          padding: 0px;
+        }
+
+        .ingredient-item p {
+          padding: 5px;
+          font-size: 1rem;
+          text-align: left;
+        }
+
+        .preparation-title {
+          font-size: 1.2rem;
+          padding: 30px 10px 0px 10px;
+        }
+
+        .ingredient-item p {
+          padding: 5px;
+          font-size: 1rem;
+          text-align: left;
+        }
+
+        .preparation-steps {
           flex-direction: column;
+          padding: 30px;
+        }
+
+        .step {
+          width: 100%;
+          text-align: center;
+          padding: 5px 100px 5px 100px;
+        }
+
+        .step p {
+          font-size: 0.9rem;
+          line-height: 1.3;
+        }
+
+        .step img {
+          width: 30%;
+        }
+
+        .sauce {
+          padding: 10px;
+        }
+
+        .sauce h2 {
+          font-size: 1.2rem;
+          padding: 20px;
+        }
+
+        .ingredients-container {
+          display: flex;
+          flex-wrap: wrap;
           padding: 20px;
         }
 
