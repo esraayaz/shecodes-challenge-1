@@ -7,18 +7,16 @@
     <meta name="format-detection" content="telephone=yes" />
     <meta name="HandheldFriendly" content="true" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>Esra's Favorite</title>
@@ -30,18 +28,15 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Recipes</a></li>
-          <li><a href="#">Order Online</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
-        <div class="nav-right">
-          <div class="cart">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <span id="cart-count">0</span>
-          </div>
-          <button class="login-button">Log In</button>
-        </div>
+        <button class="member-button">Become a Member</button>
       </nav>
+      <div>
+        <h1>Chicken Mushroom Pasta with Béchamel Sauce</h1>
+      </div>
       <div class="ingredients">
-        <h2 class="first-title">Ingredients</h2>
+        <h2>Ingredients</h2>
         <div class="ingredient-item">
           <p>300 g penne pasta</p>
         </div>
@@ -64,64 +59,68 @@
           <p>Parsley (opsiyonal)</p>
         </div>
       </div>
-      <div class="container">
-        <button class="order-btn">Order</button>
-      </div>
     </div>
 
-    <h2 class="preparation-title">Preparation for Pasta:</h2>
-    <div class="preparation-steps">
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/781/original/boil_penne.jpg?1741611924"
-          alt="Boil pasta"
-        />
-        <p>
-          Boil the penne pasta in plenty of salted water for the time indicated
-          on the package. Drain the boiled pasta and set aside.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/782/original/chicken_breast-wok.png?1741611936"
-          alt="Cook the chicken"
-        />
-        <p>
-          Cut the chicken breasts into cubes, season with salt and pepper. Heat
-          the oil in a pan, add the chicken and cook over medium heat. Cook
-          until the chicken is golden.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/784/original/mushroom-wok.jpg?1741611940"
-          alt="Saute the mushrooms"
-        />
-        <p>
-          In the same pan, add the mushrooms and sauté, seasoning with salt and
-          pepper. Cook until the mushrooms release their juice.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/785/original/sauce-wok.jpg?1741611945"
-          alt="Add the sauce"
-        />
-        <p>
-          Once the mushrooms have released their juices, add the chicken and
-          béchamel sauce and mix well. Once all the ingredients are well mixed,
-          add your pre-cooked pasta and mix again.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/787/original/serve.jpg?1741611958"
-          alt="Serve"
-        />
-        <p>
-          Place the pasta on a warm serving plate. Optionally, you can sprinkle
-          parsley on top. Bon Appétit! 😊
-        </p>
+    <div class="recipe">
+      <h2 class="preparation-title">Preparation for Pasta</h2>
+      <div class="preparation-step">
+        <div class="steps">
+          <h3>Step : 1</h3>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/781/original/boil_penne.jpg?1741611924"
+            alt="Boil pasta"
+          />
+          <p>
+            Boil the penne pasta in plenty of salted water for the time
+            indicated on the package. Drain the boiled pasta and set aside.
+          </p>
+        </div>
+        <div class="steps">
+          <h3>Step : 2</h3>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/782/original/chicken_breast-wok.png?1741611936"
+            alt="Cook the chicken"
+          />
+          <p>
+            Cut the chicken breasts into cubes, season with salt and pepper.
+            Heat the oil in a pan, add the chicken and cook over medium heat.
+            Cook until the chicken is golden.
+          </p>
+        </div>
+        <div class="steps">
+          <h3>Step : 3</h3>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/784/original/mushroom-wok.jpg?1741611940"
+            alt="Saute the mushrooms"
+          />
+          <p>
+            In the same pan, add the mushrooms and sauté, seasoning with salt
+            and pepper. Cook until the mushrooms release their juice.
+          </p>
+        </div>
+        <div class="steps">
+          <h3>Step : 4</h3>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/785/original/sauce-wok.jpg?1741611945"
+            alt="Add the sauce"
+          />
+          <p>
+            Once the mushrooms have released their juices, add the chicken and
+            béchamel sauce and mix well. Once all the ingredients are well
+            mixed, add your pre-cooked pasta and mix again.
+          </p>
+        </div>
+        <div class="steps">
+          <h3>Step : 4</h3>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/787/original/serve.jpg?1741611958"
+            alt="Serve"
+          />
+          <p>
+            Place the pasta on a warm serving plate. Optionally, you can
+            sprinkle parsley on top. Bon Appétit! 😊
+          </p>
+        </div>
       </div>
     </div>
 
@@ -166,65 +165,69 @@
       </div>
     </div>
 
-    <h2 class="preparation-title">Preparation for Béchamel Sauce :</h2>
-    <div class="preparation-steps">
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/064/original/butter-pan.jpg?1741808471"
-          alt="Melt the butter"
-        />
-        <p>
-          <strong>Melt the butter :</strong> Put the butter in a saucepan and
-          melt over low heat.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/065/original/flour-pan.jpg?1741808484"
-          alt="Add the flour"
-        />
-        <p>
-          <strong>Add the flour :</strong> After the butter is completely
-          melted, add the flour and roast for 1-2 minutes, stirring constantly.
-          You should stir until the flour loses its light smell, but do not let
-          it darken in color.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/066/original/milk-pan.jpg?1741808553"
-          alt="Add the milk"
-        />
-        <p>
-          <strong>Add the milk :</strong> While adding the milk little by
-          little, mix it quickly with a whisk. This will prevent lumps.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/067/original/salt-pan.jpg?1741808558"
-          alt="Thickens"
-        />
-        <p>
-          <strong>Make sure it thickens :</strong> Continue cooking over medium
-          heat, stirring constantly. When the sauce starts to thicken, add salt
-          and optional black pepper and grated nutmeg.
-        </p>
-      </div>
-      <div class="step">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/068/original/finish-pan.jpg?1741808561"
-          alt="Control"
-        />
-        <p>
-          <strong>Consistency control :</strong> The consistency of the sauce
-          should be runny but thick. If it is too thick, you can add a little
-          more milk. Bon Appétit! 😊
-        </p>
+    <div class="recipe">
+      <h2 class="preparation-title">Preparation for Béchamel Sauce</h2>
+      <div class="preparation-step">
+        <div class="steps">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/064/original/butter-pan.jpg?1741808471"
+            alt="Melt the butter"
+          />
+          <p class="step-title">Melt the butter</p>
+          <p class="step-description">
+            Put the butter in a saucepan and melt over low heat.
+          </p>
+        </div>
+        <div class="steps">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/065/original/flour-pan.jpg?1741808484"
+            alt="Add the flour"
+          />
+          <p class="step-title">Add the flour</p>
+          <p class="step-description">
+            After the butter is completely melted, add the flour and roast for
+            1-2 minutes, stirring constantly. You should stir until the flour
+            loses its light smell, but do not let it darken in color.
+          </p>
+        </div>
+        <div class="steps">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/066/original/milk-pan.jpg?1741808553"
+            alt="Add the milk"
+          />
+          <p class="step-title">Add the milk</p>
+          <p class="step-description">
+            While adding the milk little by little, mix it quickly with a whisk.
+            This will prevent lumps.
+          </p>
+        </div>
+        <div class="steps">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/067/original/salt-pan.jpg?1741808558"
+            alt="Thickens"
+          />
+          <p class="step-title">Make sure it thickens</p>
+          <p class="step-description">
+            Continue cooking over medium heat, stirring constantly. When the
+            sauce starts to thicken, add salt and optional black pepper and
+            grated nutmeg.
+          </p>
+        </div>
+        <div class="steps">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/068/original/finish-pan.jpg?1741808561"
+            alt="Control"
+          />
+          <p class="step-title">Consistency control</p>
+          <p class="step-description">
+            The consistency of the sauce should be runny but thick. If it is too
+            thick, you can add a little more milk. Bon Appétit! 😊
+          </p>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <footer class="text-center text-light my-4">
+    <div>
+      <footer>
         <p>
           Coded by
           <a
@@ -237,7 +240,7 @@
           <span>|</span>
           <a
             id="esra"
-            href="https://github.com/esraayaz/to-do-app"
+            href="https://github.com/esraayaz/shecodes-challenge-1"
             target="_blank"
             rel="noopener noreferrer"
             >GitHub</a
