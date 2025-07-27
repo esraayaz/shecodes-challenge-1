@@ -1,0 +1,958 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page {
+  max-width: 1200px;
+  position: relative;
+}
+/* --------------- BODY --------------- */
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* --------------- NAV --------------- */
+
+nav {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul li {
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 50px;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: chartreuse;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right .cart {
+  position: relative;
+  margin-right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(168, 251, 60);
+}
+
+#cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-right .login-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.nav-right .login-button:hover {
+  background-color: #da4346;
+  color: white;
+}
+
+/* --------------- HERO --------------- */
+
+.hero {
+  width: 100%;
+  background-color: #dcd3ca;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/635/original/engin-akyurt-o7KD3rwAcVI-unsplash.jpg?1741504813")
+      center/cover no-repeat;
+}
+
+.ingredients {
+  gap: 20px;
+  padding: 60px 0px 80px 20px;
+  display: block;
+  margin-left: 0px;
+}
+
+.first-title {
+  font-size: 2rem;
+  margin-left: 10px;
+  color: white;
+  text-align: left;
+  padding: 50px 0px 30px 100px;
+  text-decoration: underline;
+}
+
+.ingredient-item p {
+  text-align: left;
+  color: white;
+  padding: 20px 0px 20px 100px;
+  font-size: 1.3rem;
+}
+
+/* --------------- ORDER BUTTON --------------- */
+
+.container {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.order-btn {
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.5rem;
+  background-color: #8bc34a;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background-color: rgb(168, 251, 60);
+}
+
+/* --------------- PREPARATION --------------- */
+
+.preparation-steps {
+  padding: 50px 50px 100px 50px;
+  display: flex;
+  background-color: #dcd3ca;
+}
+
+.preparation-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 75px 0px 0px 0px;
+  background-color: #dcd3ca;
+}
+
+.step {
+  width: 25%;
+  margin: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.step p {
+  font-size: 1.1rem;
+}
+
+.step img {
+  width: 80%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* --------------- SAUCE --------------- */
+
+.sauce {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/634/original/karolina-kolodziejczak-NRDfttoK8qw-unsplash.jpg?1741504795")
+      center/cover no-repeat;
+}
+
+.sauce h2 {
+  text-align: center;
+  padding: 50px;
+}
+
+.ingredients-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.ingredient-sauce p {
+  text-align: center;
+}
+.ingredient-sauce img {
+  max-width: 300px;
+  border-radius: 20px;
+}
+
+/* --------------- FOOTER --------------- */
+
+footer > div {
+  text-align: center;
+}
+
+footer > div > p {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+footer > div > p > a {
+  color: #8bc34a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer > div > p > a:hover {
+  text-decoration: underline;
+}
+
+/* ====================== Media Queries ====================== */
+
+/* +++++++++++++++ 1024px +++++++++++++++ */
+
+@media only screen and (max-width: 1024px) {
+  /* --------------- NAV --------------- */
+
+  nav {
+    padding: 15px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .nav-right {
+    gap: 20px;
+    padding-top: 0px;
+  }
+
+  .nav-right .cart {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+
+  #cart-count {
+    font-size: 1rem;
+  }
+
+  .nav-right .login-button {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+  }
+
+  /* --------------- HERO --------------- */
+
+  .hero {
+    width: 100%;
+  }
+
+  .first-title {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .ingredients p {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  /* --------------- ORDER BUTTON --------------- */
+
+  .container {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .order-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* --------------- PREPARATION --------------- */
+
+  .preparation-title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 30px;
+  }
+
+  .preparation-steps {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .step {
+    width: 50%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .preparation-steps p {
+    padding: 0px;
+    width: 300px;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .step img {
+    width: 300px;
+    height: auto;
+  }
+
+  /* --------------- SAUCE --------------- */
+
+  .sauce h2 {
+    font-size: 1.2rem;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .ingredients-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .ingredient-sauce p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .ingredient-sauce img {
+    max-width: 80px;
+  }
+
+  /* --------------- FOOTER --------------- */
+
+  footer > div > p {
+    font-size: 1rem;
+  }
+}
+
+/* +++++++++++++++ 825px +++++++++++++++ */
+
+@media only screen and (max-width: 825px) {
+  /* --------------- NAV --------------- */
+
+  nav {
+    padding: 15px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .nav-right {
+    gap: 20px;
+    padding-top: 0px;
+  }
+
+  .nav-right .cart {
+    font-size: 1.1rem;
+    margin-right: 10px;
+  }
+
+  #cart-count {
+    font-size: 0.8rem;
+  }
+
+  .nav-right .login-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+
+  /* --------------- HERO --------------- */
+
+  .hero {
+    width: 100%;
+  }
+
+  .first-title {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .ingredients p {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  /* --------------- ORDER BUTTON --------------- */
+
+  .container {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .order-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* --------------- PREPARATION --------------- */
+
+  .preparation-title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 30px;
+  }
+
+  .preparation-steps {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .step {
+    width: 50%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .preparation-steps p {
+    padding: 0px;
+    width: 300px;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .step img {
+    width: 300px;
+    height: auto;
+  }
+
+  /* --------------- SAUCE --------------- */
+
+  .sauce h2 {
+    font-size: 1.2rem;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .ingredients-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .ingredient-sauce p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .ingredient-sauce img {
+    max-width: 80px;
+  }
+
+  /* --------------- FOOTER --------------- */
+
+  footer > div > p {
+    font-size: 1rem;
+  }
+}
+
+/* +++++++++++++++ 760px +++++++++++++++ */
+
+@media only screen and (max-width: 760px) {
+  /* --------------- NAV --------------- */
+
+  nav {
+    padding: 15px 20px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  nav ul li {
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .nav-right .cart {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  #cart-count {
+    font-size: 0.7rem;
+  }
+
+  .nav-right .login-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- HERO --------------- */
+
+  .hero {
+    width: 100%;
+  }
+
+  .first-title {
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .ingredients p {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- ORDER BUTTON --------------- */
+
+  .container {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .order-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* --------------- PREPARATION --------------- */
+
+  .preparation-title {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 30px;
+  }
+
+  .preparation-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .step {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .preparation-steps p {
+    padding: 0px;
+    width: 200px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .step img {
+    width: 150px;
+    height: auto;
+  }
+
+  /* --------------- SAUCE --------------- */
+
+  .sauce h2 {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .ingredients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .ingredient-sauce p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .ingredient-sauce img {
+    max-width: 80px;
+  }
+
+  /* --------------- FOOTER --------------- */
+
+  footer > div > p {
+    font-size: 0.8rem;
+  }
+}
+
+/* +++++++++++++++ 625px +++++++++++++++ */
+
+@media only screen and (max-width: 625px) {
+  /* --------------- NAV --------------- */
+
+  nav {
+    padding: 15px 20px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  nav ul li {
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .nav-right .cart {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  #cart-count {
+    font-size: 0.7rem;
+  }
+
+  .nav-right .login-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- HERO --------------- */
+
+  .hero {
+    width: 100%;
+  }
+
+  .first-title {
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .ingredients p {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- ORDER BUTTON --------------- */
+
+  .container {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .order-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* --------------- PREPARATION --------------- */
+
+  .preparation-title {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 30px;
+  }
+
+  .preparation-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .step {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .preparation-steps p {
+    padding: 0px;
+    width: 200px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .step img {
+    width: 150px;
+    height: auto;
+  }
+
+  /* --------------- SAUCE --------------- */
+
+  .sauce h2 {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .ingredients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .ingredient-sauce p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .ingredient-sauce img {
+    max-width: 80px;
+  }
+
+  /* --------------- FOOTER --------------- */
+
+  footer > div > p {
+    font-size: 0.8rem;
+  }
+}
+
+/* +++++++++++++++ 480px +++++++++++++++ */
+
+@media only screen and (max-width: 480px) {
+  /* --------------- NAV --------------- */
+
+  nav {
+    padding: 15px 20px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  nav ul li {
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .nav-right .cart {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  #cart-count {
+    font-size: 0.7rem;
+  }
+
+  .nav-right .login-button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- HERO --------------- */
+
+  .hero {
+    width: 100%;
+  }
+
+  .first-title {
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .ingredients p {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  /* --------------- ORDER BUTTON --------------- */
+
+  .container {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .order-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* --------------- PREPARATION --------------- */
+
+  .preparation-title {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 30px;
+  }
+
+  .preparation-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .step {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+  .preparation-steps p {
+    padding: 0px;
+    width: 200px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .step img {
+    width: 150px;
+    height: auto;
+  }
+
+  /* --------------- SAUCE --------------- */
+
+  .sauce h2 {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .ingredients-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  .ingredient-sauce p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .ingredient-sauce img {
+    max-width: 80px;
+  }
+
+  /* --------------- FOOTER --------------- */
+
+  footer > div > p {
+    font-size: 0.8rem;
+  }
+}
