@@ -22,7 +22,8 @@
     <title>Esra's Favorite</title>
   </head>
   <body>
-    <div class="hero">
+    <div>
+      <!-- Navigation -->
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -32,35 +33,49 @@
         </ul>
         <button class="member-button">Become a Member</button>
       </nav>
-      <div>
-        <h1>Chicken Mushroom Pasta with Béchamel Sauce</h1>
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Chicken Mushroom Pasta with Béchamel Sauce</h1>
+          <p class="hero-subtitle">
+            A creamy, delicious pasta dish that brings restaurant-quality
+            flavors to your home kitchen
+          </p>
+          <a href="#ingredients" class="cta-button">Start Cooking</a>
+        </div>
       </div>
-      <div class="ingredients">
+
+      <!-- Ingredients Section -->
+      <div class="ingredients-section" id="ingredients">
         <h2>Ingredients</h2>
-        <div class="ingredient-item">
-          <p>300 g penne pasta</p>
-        </div>
-        <div class="ingredient-item">
-          <p>400 g chicken breasts (diced)</p>
-        </div>
-        <div class="ingredient-item">
-          <p>400 g mushrooms (chopped)</p>
-        </div>
-        <div class="ingredient-item">
-          <p>3 tablespoon of olive oil</p>
-        </div>
-        <div class="ingredient-item">
-          <p>500 ml béchamel sauce</p>
-        </div>
-        <div class="ingredient-item">
-          <p>Salt and pepper (to taste)</p>
-        </div>
-        <div class="ingredient-item">
-          <p>Parsley (opsiyonal)</p>
+        <div class="ingredients-grid">
+          <div class="ingredient-card">
+            <p>300 g penne pasta</p>
+          </div>
+          <div class="ingredient-card">
+            <p>400 g chicken breasts (diced)</p>
+          </div>
+          <div class="ingredient-card">
+            <p>400 g mushrooms (chopped)</p>
+          </div>
+          <div class="ingredient-card">
+            <p>3 tablespoon of olive oil</p>
+          </div>
+          <div class="ingredient-card">
+            <p>500 ml béchamel sauce</p>
+          </div>
+          <div class="ingredient-card">
+            <p>Salt and pepper (to taste)</p>
+          </div>
+          <div class="ingredient-card">
+            <p>Parsley (opsiyonal)</p>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Recipe Steps -->
     <div class="recipe">
       <h2 class="preparation-title">Preparation for Pasta</h2>
       <div class="preparation-step">
@@ -124,38 +139,39 @@
       </div>
     </div>
 
-    <div class="sauce">
+    <!-- Sauce Section -->
+    <div class="sauce-section">
       <h2>Ingredients for Béchamel Sauce :</h2>
-      <div class="ingredients-container">
-        <div class="ingredient-sauce">
+      <div class="sauce-ingredients">
+        <div class="sauce-ingredient">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/062/original/milk.jpg?1741808455"
             alt="Milk"
           />
           <p>500 ml milk</p>
         </div>
-        <div class="ingredient-sauce">
+        <div class="sauce-ingredient">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/060/original/butter.jpg?1741808446"
             alt="Butter"
           />
           <p>40 g butter (about 2 tbsp)</p>
         </div>
-        <div class="ingredient-sauce">
+        <div class="sauce-ingredient">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/059/original/flour.jpg?1741808424"
             alt="Flour"
           />
           <p>40 g flour (about 2 tbsp)</p>
         </div>
-        <div class="ingredient-sauce">
+        <div class="sauce-ingredient">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/159/779/original/salt.jpg?1741611749"
             alt="Salt"
           />
           <p>Salt and black pepper (to taste)</p>
         </div>
-        <div class="ingredient-sauce">
+        <div class="sauce-ingredient">
           <img
             src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/160/063/original/nutmeg.jpg?1741808464"
             alt="Nutmeg"
@@ -165,6 +181,7 @@
       </div>
     </div>
 
+    <!-- Sauce Preparation -->
     <div class="recipe">
       <h2 class="preparation-title">Preparation for Béchamel Sauce</h2>
       <div class="preparation-step">
@@ -226,28 +243,28 @@
         </div>
       </div>
     </div>
-    <div>
-      <footer>
-        <p>
-          Coded by
-          <a
-            id="esra"
-            href="https://www.linkedin.com/in/esraayaz/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Esra Ayaz</a
-          >
-          <span>|</span>
-          <a
-            id="esra"
-            href="https://github.com/esraayaz/shecodes-challenge-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
-        </p>
-      </footer>
-    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Coded by
+        <a
+          id="esra"
+          href="https://www.linkedin.com/in/esraayaz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Esra Ayaz</a
+        >
+        <span>|</span>
+        <a
+          id="esra"
+          href="https://github.com/esraayaz/shecodes-challenge-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
